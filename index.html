@@ -1,56 +1,553 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/test/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <script type="module" crossorigin src="/test/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/test/assets/styles-X9THPhCB.css">
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theta-IQO | Инновации на пальцах — Образовательная платформа</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="icon" type="image/svg+xml"
+  href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23003366'/%3E%3Ccircle cx='50' cy='50' r='18' fill='%23007bff'/%3E%3C!-- Центральный синий круг (Основной цвет) --%3E%3Ccircle cx='50' cy='50' r='12' fill='%23fff'/%3E%3C!-- Точка-ядро --%3E%3Ccircle cx='50' cy='50' r='25' fill='none' stroke='%234CAF50' stroke-width='4'%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 50 50' to='360 50 50' dur='4s' repeatCount='indefinite'/%3E%3C/circle%3E%3C!-- Анимированный зеленый круг (Рост/Пассивный доход) --%3E%3Ccircle cx='50' cy='50' r='35' fill='none' stroke='%23FFC107' stroke-width='2' stroke-dasharray='10 5'%3E%3CanimateTransform attributeName='transform' type='rotate' from='360 50 50' to='0 50 50' dur='6s' repeatCount='indefinite'/%3E%3C/circle%3E%3C!-- Анимированный желтый обод (Инновации) --%3E%3C/svg%3E">
+    <script type="module" crossorigin src="/theta-iqo/assets/main-BJy5yUU3.js"></script>
+    <link rel="stylesheet" crossorigin href="/theta-iqo/assets/main-DlpfFsv8.css">
   </head>
   <body>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <div id="cookie-popup" class="cookie-popup"></div>
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
+  <div class="header__container container">
+    <a href="#" class="header__logo logo">Theta-IQO</a>
+    <nav class="header__nav nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#hero" class="nav__link nav__link--active">Главная</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link">О нас</a></li>
+        <li class="nav__item"><a href="#platform" class="nav__link">О платформе</a></li>
+        <li class="nav__item"><a href="#benefits" class="nav__link">Преимущества</a></li>
+        <li class="nav__item"><a href="#technology" class="nav__link">Технология</a></li>
+        <li class="nav__item"><a href="#faq" class="nav__link">FAQ</a></li>
+        <li class="nav__item"><a href="#contact" class="nav__link nav__link--cta btn btn--small">Связаться</a></li>
       </ul>
     </nav>
+    <button class="header__burger" aria-label="Открыть меню">
+      <i data-lucide="menu"></i>
+    </button>
   </div>
 </header>
 
-
     <main>
       <!-- Loads the specified .html file -->
-      
+      <section id="hero" class="hero">
+    <canvas id="hero-canvas" class="hero__canvas"></canvas>
+
+    <div class="hero__container container">
+
+        <div class="hero__content">
+            <h1 class="hero__title" data-aos="fade-up" data-aos-delay="100">
+                <span class="hero__highlight">Инновационная технология</span> для <br>формирования полного понимания.
+            </h1>
+
+            <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="300">
+                Theta-IQO — это **технология нового поколения**, которая поможет вам **расширить горизонты проекта** и
+                **воплотить мечты в реальность** с **быстрым и легким стартом**.
+            </p>
+
+            <div class="hero__cta-group" data-aos="fade-up" data-aos-delay="500">
+                <a href="#contact" class="btn btn--primary btn--large">
+                    Пройти регистрацию <i data-lucide="arrow-right"></i>
+                </a>
+                <a href="#platform" class="btn btn--outline btn--large">
+                    Узнать детали
+                </a>
+            </div>
+
+            <p class="hero__info" data-aos="fade-up" data-aos-delay="700">
+                <i data-lucide="check-circle" class="hero__info-icon"></i>
+                Платформа уже доступна в Европе.
+            </p>
+        </div>
+
+        <div class="hero__image" data-aos="fade-left" data-aos-delay="600">
+            <img src="img/placeholder.png" alt="Визуализация технологического прогресса" class="hero__img">
+        </div>
+    </div>
+</section>
+<section id="about" class="about section">
+    <div class="container">
+        <h2 class="section__title" data-aos="fade-up">О нас: Миссия, Идеология, Ценности</h2>
+        <p class="section__subtitle" data-aos="fade-up" data-aos-delay="200">
+            Наша цель — помочь вам **сформировать полное понимание** сложных технологий. Мы ваш **проверенный партнер**
+            в мире инноваций.
+        </p>
+
+        <div class="about__mission" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="about__mission-title">Наша Центральная Идея</h3>
+            <p>Мы верим, что доступ к знаниям о **технологии нового поколения** должен быть простым и интуитивно
+                понятным. Мы превращаем сложные концепции в понятные, пошаговые инструкции.</p>
+        </div>
+
+        <div class="about__values">
+
+            <div class="value-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="value-card__icon-wrapper">
+                    <i data-lucide="lightbulb" class="value-card__icon"></i>
+                </div>
+                <h4 class="value-card__title">Ясность</h4>
+                <p class="value-card__description">Сложное становится простым. Мы гарантируем, что вы **легко
+                    разберетесь без опыта**.</p>
+            </div>
+
+            <div class="value-card" data-aos="zoom-in" data-aos-delay="550">
+                <div class="value-card__icon-wrapper">
+                    <i data-lucide="infinity" class="value-card__icon"></i>
+                </div>
+                <h4 class="value-card__title">Инновации</h4>
+                <p class="value-card__description">Мы всегда на шаг впереди, предоставляя доступ к передовым решениям и
+                    знаниям.</p>
+            </div>
+
+            <div class="value-card" data-aos="zoom-in" data-aos-delay="700">
+                <div class="value-card__icon-wrapper">
+                    <i data-lucide="users" class="value-card__icon"></i>
+                </div>
+                <h4 class="value-card__title">Партнерство</h4>
+                <p class="value-card__description">Мы строим долгосрочные отношения с нашими пользователями как с
+                    надежными партнерами.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="platform" class="platform section">
+    <div class="container">
+        <h2 class="section__title" data-aos="fade-up">Платформа года: Ваш доступ к технологиям</h2>
+        <p class="section__subtitle" data-aos="fade-up" data-aos-delay="100">
+            Theta-IQO — это **технология для пассивного дохода**, разработанная с учетом максимальной простоты. Получите
+            больше информации, чтобы **оценить перспективы проекта**.
+        </p>
+
+        <div class="platform__features">
+
+            <div class="feature-card" data-aos="fade-right" data-aos-delay="200">
+                <i data-lucide="zap" class="feature-card__icon"></i>
+                <h3 class="feature-card__title">Подключение за 2 Минуты</h3>
+                <p class="feature-card__description">
+                    **Быстрый и легкий старт** — это не просто слова. **Подключение занимает 2 минуты**, и вы сразу
+                    начинаете работу.
+                </p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-right" data-aos-delay="350">
+                <i data-lucide="trending-up" class="feature-card__icon"></i>
+                <h3 class="feature-card__title">Программа Пассивного Дохода</h3>
+                <p class="feature-card__description">
+                    Используйте нашу **программу пассивного дохода** для получения стабильных результатов без активного
+                    участия.
+                </p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-right" data-aos-delay="500">
+                <i data-lucide="feather" class="feature-card__icon"></i>
+                <h3 class="feature-card__title">Интуитивный Интерфейс</h3>
+                <p class="feature-card__description">
+                    **Легко разобраться без опыта**. Наша платформа разработана так, чтобы быть доступной абсолютно
+                    каждому.
+                </p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-left" data-aos-delay="650">
+                <i data-lucide="message-square" class="feature-card__icon"></i>
+                <h3 class="feature-card__title">Бесплатная Консультация</h3>
+                <p class="feature-card__description">
+                    Получите **бесплатную консультацию по всем вопросам** от наших экспертов 24/7.
+                </p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-left" data-aos-delay="800">
+                <i data-lucide="globe" class="feature-card__icon"></i>
+                <h3 class="feature-card__title">Доступ в Европе</h3>
+                <p class="feature-card__description">
+                    **Платформа уже доступна в Европе** и готова к работе с пользователями из стран ЕС.
+                </p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-left" data-aos-delay="950">
+                <i data-lucide="graduation-cap" class="feature-card__icon"></i>
+                <h3 class="feature-card__title">База Знаний</h3>
+                <p class="feature-card__description">
+                    Погрузиться в детали проекта можно через нашу обширную и структурированную базу знаний.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="platform__cta" data-aos="zoom-in" data-aos-delay="1100">
+            <a href="#contact" class="btn btn--primary btn--large">
+                Пройти опрос и получить доступ
+            </a>
+            <p class="platform__cta-text">Доступ к платформе открыт! Начните сейчас.</p>
+        </div>
+
+    </div>
+</section>
+<section id="benefits" class="benefits section">
+    <div class="container">
+        <h2 class="section__heading" data-aos="fade-up">Почему Theta-IQO — ваш лучший выбор?</h2>
+        <p class="section__subheading" data-aos="fade-up" data-aos-delay="100">
+            Мы предлагаем не просто знания, а четкий путь к **воплощению мечты в реальность** через нашу **программу
+            пассивного дохода**.
+        </p>
+
+        <div class="focal-grid">
+
+            <div class="focal-item focal-item--1" data-aos="zoom-in" data-aos-delay="200">
+                <div class="focal-icon-area">
+                    <span class="focal-number">01</span>
+                    <i data-lucide="rocket" class="focal-icon"></i>
+                </div>
+                <div class="focal-content-area">
+                    <h3 class="focal-title">Быстрый и Легкий Старт</h3>
+                    <p class="focal-description">
+                        Не нужно тратить недели на обучение. Благодаря простому интерфейсу, **подключение занимает 2
+                        минуты**, и вы сразу в деле.
+                    </p>
+                </div>
+            </div>
+
+            <div class="focal-item focal-item--2" data-aos="zoom-in" data-aos-delay="400">
+                <div class="focal-icon-area">
+                    <span class="focal-number">02</span>
+                    <i data-lucide="book-open-check" class="focal-icon"></i>
+                </div>
+                <div class="focal-content-area">
+                    <h3 class="focal-title">Полное Погружение в Детали</h3>
+                    <p class="focal-description">
+                        Используйте наш онлайн-тест и базу знаний, чтобы **погрузиться в детали** и **сформировать
+                        полное понимание** проекта.
+                    </p>
+                </div>
+            </div>
+
+            <div class="focal-item focal-item--3" data-aos="zoom-in" data-aos-delay="600">
+                <div class="focal-icon-area">
+                    <span class="focal-number">03</span>
+                    <i data-lucide="activity" class="focal-icon"></i>
+                </div>
+                <div class="focal-content-area">
+                    <h3 class="focal-title">Оценка Перспектив и Рост</h3>
+                    <p class="focal-description">
+                        **Оцените перспективы проекта** и активируйте **технологию для пассивного дохода**. Ваше
+                        развитие происходит с нами.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="technology" class="technology section">
+    <div class="container">
+        <h2 class="section__title" data-aos="fade-up">Технология Нового Поколения: Погрузиться в Детали</h2>
+        <p class="section__subtitle" data-aos="fade-up" data-aos-delay="100">
+            Theta-IQO основана на **инновационной технологии**, разработанной для **расширения горизонтов проекта**. Мы
+            открываем для вас **новые возможности**.
+        </p>
+
+        <div class="tabs-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="tabs-nav">
+                <button class="tabs-nav__button tabs-nav__button--active" data-tab="algorithm">
+                    <i data-lucide="cpu"></i> Алгоритм IQO
+                </button>
+                <button class="tabs-nav__button" data-tab="security">
+                    <i data-lucide="shield-check"></i> Защита и Безопасность
+                </button>
+                <button class="tabs-nav__button" data-tab="integration">
+                    <i data-lucide="git-branch"></i> Интеграция и Масштабирование
+                </button>
+            </div>
+
+            <div class="tabs-content">
+
+                <div class="tabs-content__item tabs-content__item--active" data-tab-content="algorithm">
+                    <h3 class="tabs-content__title">Алгоритм IQO: Точность и Эффективность</h3>
+                    <div class="tabs-content__wrapper">
+                        <p class="tabs-content__text">
+                            В основе лежит запатентованный **Алгоритм IQO**, который использует машинное обучение для
+                            анализа данных и прогнозирования. Это обеспечивает максимальную эффективность для
+                            **программы пассивного дохода** и позволяет вам **получить больше информации** для принятия
+                            взвешенных решений. Наша **технология нового поколения** постоянно адаптируется.
+                        </p>
+                        <img src="img/placeholder.png" alt="Схема работы алгоритма IQO" class="tabs-content__img">
+                    </div>
+                </div>
+
+                <div class="tabs-content__item" data-tab-content="security">
+                    <h3 class="tabs-content__title">Защита: Ваш Проверенный Партнер</h3>
+                    <div class="tabs-content__wrapper">
+                        <p class="tabs-content__text">
+                            Мы — ваш **проверенный партнер**. Все пользовательские данные и транзакции защищены
+                            многоуровневым шифрованием. Мы строго соблюдаем европейские стандарты (GDPR) и обеспечиваем
+                            анонимность. **Подключение занимает 2 минуты**, но безопасность гарантирована на 100%.
+                        </p>
+                        <img src="img/placeholder.png" alt="Система безопасности данных" class="tabs-content__img">
+                    </div>
+                </div>
+
+                <div class="tabs-content__item" data-tab-content="integration">
+                    <h3 class="tabs-content__title">Масштаб: Расширить Горизонты</h3>
+                    <div class="tabs-content__wrapper">
+                        <p class="tabs-content__text">
+                            Платформа разработана для легкого масштабирования. Она позволяет **расширить горизонты
+                            проекта** и интегрироваться с другими образовательными и финансовыми инструментами.
+                            **Платформа уже доступна в Европе** и готова к глобальному росту, открывая вам **новые
+                            возможности**.
+                        </p>
+                        <img src="img/placeholder.png" alt="Схема интеграции платформы" class="tabs-content__img">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<section id="perspectives" class="perspectives section">
+    <div class="container">
+        <h2 class="section__title section__title--white" data-aos="fade-up">Оцените Перспективы Проекта</h2>
+        <p class="section__subtitle section__subtitle--white" data-aos="fade-up" data-aos-delay="100">
+            Theta-IQO — это **новые возможности** для вашего финансового роста. Мы предлагаем **быстрый и легкий старт**
+            к **воплощению мечты в реальность**.
+        </p>
+
+        <div class="perspectives__stats">
+
+            <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                <span class="stat-item__number" data-target="10000" data-suffix="+">0</span>
+                <h4 class="stat-item__title">Активных Пользователей</h4>
+            </div>
+
+            <div class="stat-item" data-aos="zoom-in" data-aos-delay="350">
+                <span class="stat-item__number" data-target="150" data-suffix="%">0</span>
+                <h4 class="stat-item__title">Годовой Рост Платформы</h4>
+            </div>
+
+            <div class="stat-item" data-aos="zoom-in" data-aos-delay="500">
+                <span class="stat-item__number" data-target="98" data-suffix="%">0</span>
+                <h4 class="stat-item__title">Успешность Программы Пассивного Дохода</h4>
+            </div>
+
+            <div class="stat-item" data-aos="zoom-in" data-aos-delay="650">
+                <span class="stat-item__number" data-target="27" data-suffix="">0</span>
+                <h4 class="stat-item__title">Доступных Стран в Европе</h4>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="faq" class="faq section">
+    <div class="container">
+        <h2 class="section__title" data-aos="fade-up">Часто Задаваемые Вопросы (FAQ)</h2>
+        <p class="section__subtitle" data-aos="fade-up" data-aos-delay="100">
+            Получите **бесплатную консультацию по всем вопросам** или найдите ответ ниже. Мы ваш **проверенный
+            партнер**!
+        </p>
+
+        <div class="faq__accordion-group" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="accordion-item">
+                <button class="accordion-item__header">
+                    <h3 class="accordion-item__title">Платформа уже доступна в Европе?</h3>
+                    <i data-lucide="chevron-down" class="accordion-item__icon"></i>
+                </button>
+                <div class="accordion-item__content">
+                    <p>Да, **платформа уже доступна в Европе** и активно используется в странах ЕС. Мы строго соблюдаем
+                        все европейские нормы конфиденциальности (GDPR).</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-item__header">
+                    <h3 class="accordion-item__title">Нужен ли мне опыт для работы с Theta-IQO?</h3>
+                    <i data-lucide="chevron-down" class="accordion-item__icon"></i>
+                </button>
+                <div class="accordion-item__content">
+                    <p>Вовсе нет! Наша платформа создана так, чтобы **легко разобраться без опыта**. Интуитивный
+                        интерфейс и подробная база знаний позволяют вам **быстрый и легкий старт**.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-item__header">
+                    <h3 class="accordion-item__title">Как работает программа пассивного дохода?</h3>
+                    <i data-lucide="chevron-down" class="accordion-item__icon"></i>
+                </button>
+                <div class="accordion-item__content">
+                    <p>
+                        Наша **программа пассивного дохода** основана на **инновационной технологии** и алгоритмах IQO.
+                        После **подключения, которое занимает 2 минуты**, система начинает работать автономно, что
+                        позволяет вам получать стабильный результат.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-item__header">
+                    <h3 class="accordion-item__title">Как я могу получить больше информации о проекте?</h3>
+                    <i data-lucide="chevron-down" class="accordion-item__icon"></i>
+                </button>
+                <div class="accordion-item__content">
+                    <p>
+                        Вы можете **получить больше информации** и **погрузиться в детали** через нашу Базу Знаний, а
+                        также заказать **бесплатную консультацию по всем вопросам** через форму обратной связи.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="contact" class="contact section">
+    <div class="container">
+        <h2 class="section__title section__title--white" data-aos="fade-up">Заказать Бесплатную Консультацию</h2>
+        <p class="section__subtitle section__subtitle--white" data-aos="fade-up" data-aos-delay="100">
+            Начните **быстрый и легкий старт** сегодня. Заполните форму, чтобы **получить больше информации** и
+            обсудить, как **воплотить мечту в реальность**.
+        </p>
+
+        <div class="contact__form-wrapper" data-aos="zoom-in" data-aos-delay="200">
+
+            <div id="contact-success" class="form-message form-message--success" style="display: none;">
+                <i data-lucide="check-circle"></i>
+                <p>Ваше сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время.</p>
+            </div>
+
+            <form id="contact-form" class="contact__form">
+
+                <div class="form-group"><input type="text" id="name" name="name" placeholder="Ваше имя" required></div>
+                <div class="form-group"><input type="email" id="email" name="email"
+                        placeholder="Ваш E-mail (обязательно)" required></div>
+                <div class="form-group"><input type="tel" id="phone" name="phone" placeholder="Телефон (необязательно)">
+                </div>
+
+                <div class="form-group form-group--captcha">
+                    <label for="captcha-input" id="captcha-label">Проверка: 7 + 5 = ?</label>
+                    <input type="number" id="captcha-input" name="captcha-input" placeholder="Введите результат"
+                        required>
+                </div>
+
+                <div class="form-group form-group--checkbox">
+                    <input type="checkbox" id="privacy-agree" name="privacy-agree" required>
+                    <label for="privacy-agree">Я согласен с условиями использования и
+                        <a href="privacy.html" target="_blank">политикой конфиденциальности</a>.
+                    </label>
+                </div>
+
+                <button type="submit" id="contact-submit-btn" class="btn btn--primary btn--large contact__submit-btn">
+                    Получить Бесплатную Консультацию <i data-lucide="send"></i>
+                </button>
+
+                <p class="contact__privacy-note">
+                    <i data-lucide="lock" class="contact__lock-icon"></i>
+                    Мы ваш **проверенный партнер**. Ваши данные защищены.
+                </p>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+  <div class="footer__container container">
+
+    <div class="footer__column footer__column--brand">
+      <a href="#" class="footer__logo logo">Theta-IQO</a>
+      <p class="footer__description">Инновации на пальцах — образовательная платформа. Откройте новые возможности.</p>
+      <div class="footer__socials">
+        <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="#" aria-label="telegram"><i data-lucide="send"></i></a>
+      </div>
+    </div>
+
+    <div class="footer__column">
+      <h4 class="footer__title">Навигация</h4>
+      <ul class="footer__list">
+        <li><a href="#hero" class="footer__link">Главная</a></li>
+        <li><a href="#about" class="footer__link">О нас</a></li>
+        <li><a href="#platform" class="footer__link">О платформе</a></li>
+        <li><a href="#benefits" class="footer__link">Преимущества</a></li>
+        <li><a href="#technology" class="footer__link">Технология</a></li>
+        <li><a href="#faq" class="footer__link">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__column">
+      <h4 class="footer__title">Юридическая информация</h4>
+      <ul class="footer__list">
+        <li><a href="privacy.html" class="footer__link">Политика конфиденциальности</a></li>
+        <li><a href="cookies.html" class="footer__link">Политика использования Cookies</a></li>
+        <li><a href="terms.html" class="footer__link">Условия использования</a></li>
+        <li><a href="return.html" class="footer__link">Политика возврата</a></li>
+        <li><a href="disclaimer.html" class="footer__link">Отказ от ответственности</a></li>
+        <li><a href="personal-data-policy.html" class="footer__link">Политика обработки данных</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__column footer__column--contact">
+      <h4 class="footer__title">Связаться с нами</h4>
+      <address class="footer__address">
+        <p class="footer__contact-item">
+          <i data-lucide="mail" class="footer__icon"></i>
+          <a href="mailto:insight@theta-iqo.click">insight@theta-iqo.click</a>
+        </p>
+        <p class="footer__contact-item">
+          <i data-lucide="phone" class="footer__icon"></i>
+          <a href="tel:+49302194857">+49 30 2194857</a>
+        </p>
+        <p class="footer__contact-item">
+          <i data-lucide="map-pin" class="footer__icon"></i>
+          Potsdamer Platz 1, 10785 Berlin, Deutschland
+        </p>
+      </address>
+      <p class="footer__copyright">
+        &copy; 2025 Theta-IQO. Все права защищены.
+      </p>
+    </div>
+
+  </div>
+  <div class="footer__disclaimer">
+    <div class="container">
+      <p><strong>Предложение активно только в странах ЕС.</strong></p>
+    </div>
   </div>
 </footer>
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Прокрутить наверх">
+      <i data-lucide="chevron-up"></i>
+    </button>
+    
 
-
+    
+    <div id="cookieConsent" class="cookie-consent">
+      <div class="container cookie-consent__content">
+        <p>Мы используем Cookies для **расширения горизонтов проекта** и улучшения вашего опыта. Продолжая пользоваться
+          сайтом, вы соглашаетесь с нашей <a href="#" class="cookie-consent__link">Политикой конфиденциальности</a>.</p>
+        <button id="acceptCookiesBtn" class="btn btn--secondary btn--small">Принять</button>
+      </div>
+    </div>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      // Инициализация иконок Lucide
+      lucide.createIcons();
+    </script>
   </body>
 </html>
