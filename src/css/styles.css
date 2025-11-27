@@ -67,7 +67,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-light-grey);
+  color: var(  --color-light-grey);
 }
 
 /* Заголовки */
@@ -138,7 +138,7 @@ h4 {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 24px;
-  color: var(--color-heading);
+  color: var(--color-text);
 }
 
 .logo:hover {
@@ -237,7 +237,46 @@ h4 {
   width: 28px;
   height: 28px;
 }
+@media (max-width: 768px) {
 
+  .header__burger {
+    display: block;
+    z-index: 1100;
+  }
+
+  .header__nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 80px 30px;
+    transition: right 0.35s ease;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000;
+  }
+
+  /* Когда открыто */
+  .header__nav.nav-open {
+    right: 0;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
+}
 /* -------------------------------------------------------------------------- */
 /* 3. HERO SECTION (Блок hero)                     */
 /* -------------------------------------------------------------------------- */
@@ -544,36 +583,7 @@ h4 {
 /* Планшеты (max-width: 992px) */
 @media (max-width: 992px) {
 
-  /* Header/Nav */
-  .nav {
-    /* Приховуємо за замовчуванням */
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    /* Під хедером */
-    right: 0;
-    width: 100%;
-    background-color: #fff;
-    padding: 20px 0;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    /* Закруглені краї для мобільного меню */
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-  }
-
-  .nav--active {
-    display: flex !important;
-    /* Показати меню */
-  }
-
-  .nav__list {
-    flex-direction: column;
-    gap: 0;
-    padding: 0 15px;
-  }
-
+  
   .header {
     top: 0;
     width: 100%;
@@ -612,26 +622,7 @@ h4 {
   }
 }
 
-/* Мобильные (max-width: 576px) */
-@media (max-width: 576px) {
-  .header__container {
-    height: 60px;
-  }
 
-  .footer__container {
-    grid-template-columns: 1fr;
-    /* Одна колонка */
-  }
-
-  .footer__title {
-    margin-top: 20px;
-  }
-
-  .footer__column--brand {
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-}
 /* style.css (Додайте після стилів Hero) */
 
 /* -------------------------------------------------------------------------- */
